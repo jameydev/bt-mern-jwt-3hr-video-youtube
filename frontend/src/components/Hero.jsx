@@ -1,4 +1,5 @@
 import { Container, Card, Button } from 'react-bootstrap';
+import { LinkContainer } from 'react-router-bootstrap';
 
 export default function Hero() {
     return (
@@ -12,12 +13,16 @@ export default function Hero() {
                         Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo, voluptas.
                     </p>
                     <div className="d-flex">
-                        <Button variant="primary" href="/login" className="me-3">
-                            Login
-                        </Button>
-                        <Button href="/register" variant="secondary">
-                            Register
-                        </Button>
+                        <LinkContainer to="/login">
+                            <Button variant="primary" className="me-3">
+                                Login
+                            </Button>
+                        </LinkContainer>
+                        <LinkContainer to="/register">
+                            <Button variant="secondary">
+                                Register
+                            </Button>
+                        </LinkContainer>
                     </div>
                 </Card>
             </Container>
